@@ -15,8 +15,7 @@ class History extends React.Component {
 
      const {ItemList} = this.props.getState();
     console.log('ItemList:',ItemList);
-    //const {ItemList} = items;
-  //   const {ItemList} = items;
+  
 
   const displayItems = ItemList;
   return (
