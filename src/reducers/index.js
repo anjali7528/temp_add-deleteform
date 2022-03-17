@@ -1,7 +1,7 @@
-import { ADD_LIST } from "../actions";
+import { ADD_LIST, ADD_TO_List } from "../actions";
 
 const initialListState ={
-   ItemList: []
+   ItemList: [],
 }
 
 export default function items (state=initialListState, action){
@@ -13,6 +13,12 @@ export default function items (state=initialListState, action){
                 ...state,
                 ItemList: action.items
             }
+        case ADD_TO_List:
+            console.log('run');
+            return{
+                ...state,
+                ItemList: [action.item, ...state.ItemList]
+            }    
         default:
             return state;    
     }

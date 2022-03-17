@@ -25,8 +25,8 @@ class History extends React.Component {
           {displayItems.map((item,index) =>(
            <Itmes 
            dispatch = {this.props.dispatch}
-          item = {item}
-          key = {`ItemList'-${index}`}
+             item = {item}
+             key = {`ItemList'-${index}`}
            />
            ))}
         </div>

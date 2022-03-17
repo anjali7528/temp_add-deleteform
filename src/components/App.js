@@ -17,7 +17,11 @@ class App extends React.Component {
          dispatch={this.props.store.dispatch} 
          getState={this.props.store.getState}
          /></div>
-        <div className='addnewitem'><AddNewItem /></div>
+        <div className='addnewitem'><AddNewItem 
+        dispatch={this.props.store.dispatch} 
+        getState={this.props.store.getState}
+        
+        /></div>
     </div>
     
   );
