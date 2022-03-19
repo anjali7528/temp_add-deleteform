@@ -12,6 +12,7 @@ class itmes extends React.Component {
              </div>    
              <div className='right'>
                   <div className='price'>{item.Price}</div>
+                  <button>delete</button>
              </div>
         </div>
     </div>

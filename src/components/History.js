@@ -11,6 +11,7 @@ class History extends React.Component {
        console.log('UPDATED');
        this.forceUpdate();
      })
+   
     this.props.dispatch(
       addlist(data)
     )
@@ -26,7 +27,7 @@ class History extends React.Component {
   const displayItems = ItemList;
   return (
     <div>
-        <h2>History</h2>
+        <h2>Items</h2>
         <div className='list'>
           {displayItems.map((item,index) =>(
            <Itmes 
