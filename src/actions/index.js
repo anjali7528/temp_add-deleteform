@@ -1,5 +1,5 @@
 export const ADD_LIST ='ADD_LIST';
-export const ADD_TO_List = 'ADD_TO_LIST';
+export const ADD_TO_LIST = 'ADD_TO_LIST';
 export const SET_FORM_VALUES = 'SET_FORM_VALUES';
 export const addlist = (items) => {
     return{
@@ -11,7 +11,7 @@ export const addlist = (items) => {
 
 export function addtolist(item){
     return {
-        type:ADD_TO_List,
+        type:ADD_TO_LIST,
         item
     }
 }

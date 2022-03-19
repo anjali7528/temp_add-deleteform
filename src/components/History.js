@@ -2,19 +2,25 @@ import React from 'react'
 import Itmes from './Itmes';
 import{addlist} from '../actions';
 import {data} from '../data';
-//import ItemList from '../reducers';
+
+
 
 class History extends React.Component {
-   componentWillMount(){
+   componentDidMount(){
+     this.props.subscribe(()=>{
+       console.log('UPDATED');
+       this.forceUpdate();
+     })
     this.props.dispatch(
       addlist(data)
     )
       console.log(this.props.getState());
   }
   render(){
-
+ 
      const {ItemList} = this.props.getState();
-    console.log('ItemList:',ItemList);
+    console.log('hItemList:',ItemList);
+    
   
 
   const displayItems = ItemList;

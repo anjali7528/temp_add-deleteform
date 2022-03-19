@@ -1,10 +1,11 @@
-import { ADD_LIST, ADD_TO_List } from "../actions";
+import actions from "redux-form/lib/actions";
+import { ADD_LIST, ADD_TO_LIST } from "../actions";
 
-const initialListState ={
+const initialListState = {
    ItemList: [],
 }
 
-export default function items (state=initialListState, action){
+export default function items (state = initialListState, action){
     console.log('LIST REDUCER');
 
     switch(action.type){
@@ -13,13 +14,20 @@ export default function items (state=initialListState, action){
                 ...state,
                 ItemList: action.items
             }
-        case ADD_TO_List:
-            console.log('run');
+        case ADD_TO_LIST:
+            console.log('run', state);
             return{
                 ...state,
-                ItemList: [action.item, ...state.ItemList]
+                ItemList: [...state.ItemList, action.item],
             }    
+            
         default:
             return state;    
     }
 }
+
+
+
+
+
+

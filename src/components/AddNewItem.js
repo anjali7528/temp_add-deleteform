@@ -1,6 +1,6 @@
 import React from 'react';
-import { setformvalue,addtolist } from '../actions';
-
+import {addtolist } from '../actions';
+import result from '../reducers';
 
 class AddNewItem extends React.Component{
 
@@ -8,30 +8,32 @@ class AddNewItem extends React.Component{
   constructor(props){
     super(props);
     this.state={
-      item: ' ',
-      price: 0
+      name: ' ',
+      Price: 0
     };
   }
 
   handleAddNewItem = e => {
-    console.log('new state',this.state);
+    console.log('Item',this.state);
     e.preventDefault();
     this.props.dispatch(addtolist(this.state));
   }
 
   handleChange1 =(e) => 
     this.setState({
-      item: e.target.value
+      name: e.target.value
     } 
   );
 
     handleChange2 = (e) =>
     this.setState({
-      price: e.target.value,
+      Price: e.target.value,
     }
   );  
     
   render(){
+    
+    
   return (
     <div><h2>AddNewItem</h2>
     <form> 
