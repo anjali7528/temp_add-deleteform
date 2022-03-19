@@ -1,6 +1,6 @@
 import React from 'react';
 import {addtolist } from '../actions';
-import result from '../reducers';
+
 
 class AddNewItem extends React.Component{
 

@@ -1,5 +1,4 @@
-import actions from "redux-form/lib/actions";
-import { ADD_LIST, ADD_TO_LIST } from "../actions";
+import { ADD_LIST, ADD_TO_LIST,DELETE_FROM_LIST } from "../actions";
 
 const initialListState = {
    ItemList: [],
@@ -19,7 +18,17 @@ export default function items (state = initialListState, action){
             return{
                 ...state,
                 ItemList: [...state.ItemList, action.item],
-            }    
+            }  
+        
+        case DELETE_FROM_LIST:
+            console.log('called', action.item.key)
+            const fileterdArray = state.ItemList.filter(
+                item => item.name !== action.item.name 
+            );
+            return{
+                ...state,
+                ItemList: fileterdArray
+            };   
             
         default:
             return state;    
